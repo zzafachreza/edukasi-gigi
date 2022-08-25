@@ -142,21 +142,23 @@ export default function Home({ navigation }) {
               fontFamily: fonts.secondary[400],
               fontSize: windowWidth / 32,
               color: colors.white
-            }}>Pendaftaran Konsultasi Edukasi Gigi Binong</Text>
+            }}>Pendaftaran Konsultasi dan Edukasi Gigi Online Binong</Text>
 
           </View>
           <View style={{
             // flex: 1
+
           }}>
-            <Image source={require('../../assets/puskesmas.png')} style={{ width: 30, height: 35 }} />
+
+            <Image source={require('../../assets/tangerang.png')} style={{ width: 30, height: 35 }} />
           </View>
           <View style={{
             // flex: 1
             marginLeft: 5,
           }}>
-
-            <Image source={require('../../assets/tangerang.png')} style={{ width: 30, height: 35 }} />
+            <Image source={require('../../assets/puskesmas.png')} style={{ width: 30, height: 35 }} />
           </View>
+
 
         </View>
 

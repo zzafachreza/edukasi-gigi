@@ -45,6 +45,10 @@ export default function Register({ navigation }) {
     const [data, setData] = useState({
         nik: '',
         password: '',
+        username: '',
+        nama_lengkap: '',
+        nik: '',
+        alamat: ''
     });
 
     const simpan = () => {
@@ -53,6 +57,7 @@ export default function Register({ navigation }) {
             data.nama_lengkap.length === 0 &&
             data.telepon.length === 0 &&
             data.alamat.length === 0 &&
+            data.username.length === 0 &&
             data.password.length === 0
 
         ) {
@@ -130,6 +135,20 @@ export default function Register({ navigation }) {
                         setData({
                             ...data,
                             nik: value,
+                        })
+                    }
+                />
+
+                <MyGap jarak={10} />
+                <MyInput
+                    placeholder="Masukan Username"
+                    label="Username"
+                    iconname="at"
+                    value={data.username}
+                    onChangeText={value =>
+                        setData({
+                            ...data,
+                            username: value,
                         })
                     }
                 />

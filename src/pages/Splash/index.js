@@ -68,63 +68,22 @@ export default function Splash({ navigation }) {
         alignItems: 'center'
       }}>
 
-        <View style={{
-          flexDirection: 'row',
-          marginBottom: 20,
-
-        }}>
-
-          <View style={{
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-            <Image
-              source={require('../../assets/puskesmas.png')}
-              style={
-                {
-                  width: 35,
-                  height: 40
-                }
-              }
-            />
-          </View>
-
-          <View style={{
-            paddingLeft: 5,
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}>
-            <Text style={{
-              color: colors.white,
-              fontFamily: fonts.secondary[600],
-              fontSize: windowWidth / 25
-            }}>PUSKESMAS BINONG</Text>
-          </View>
-
-        </View>
         <Image
-          source={require('../../assets/logo.png')}
+          source={require('../../assets/logo2.png')}
           style={
             {
-              width: 170,
-              height: 100
+              width: 200,
+              height: 200
             }
           }
         />
-
-        <Text style={{
-          marginTop: 10,
-          color: colors.white,
-          fontFamily: fonts.secondary[900],
-          fontSize: windowWidth / 10
-        }}>Pak Ebing</Text>
         <Text style={{
           marginTop: '2%',
           color: colors.white,
           fontFamily: fonts.secondary[600],
-          fontSize: windowWidth / 25,
+          fontSize: windowWidth / 30,
           marginBottom: 10,
-        }}>Pendaftaran Konsultasi Edukasi Gigi Binong</Text>
+        }}>Pendaftaran Konsultasi dan Edukasi Gigi Online Binong</Text>
         <ActivityIndicator size="large" color={colors.secondary} />
       </View>
 
