@@ -140,7 +140,7 @@ export default function Home({ navigation }) {
             </View>
             <Text style={{
               fontFamily: fonts.secondary[400],
-              fontSize: windowWidth / 32,
+              fontSize: windowWidth / 38,
               color: colors.white
             }}>Pendaftaran Konsultasi dan Edukasi Gigi Online Binong</Text>
 
@@ -167,8 +167,8 @@ export default function Home({ navigation }) {
       {/* slider */}
 
       <View style={{
-        marginTop: -50,
-        height: windowHeight / 3.5,
+        marginTop: -40,
+        height: windowHeight / 4,
 
       }}>
         <Image source={require('../../assets/slide.png')} style={{ width: windowWidth, height: 200, resizeMode: 'contain', borderRadius: 10, }} />
@@ -183,11 +183,11 @@ export default function Home({ navigation }) {
         justifyContent: 'space-around'
       }}>
         <MyMenu onPress={() => navigation.navigate('SHasil', {
-          pdf: 'bundle-assets://pdf/1.pdf',
+          img: require('../../assets/mm1.png'),
           judul: 'Struktur Gigi'
         })} img={require('../../assets/m1.png')} judul="Struktur Gigi" />
         <MyMenu onPress={() => navigation.navigate('SHasil', {
-          pdf: 'bundle-assets://pdf/2.pdf',
+          img: require('../../assets/mm2.png'),
           judul: 'Tanda Gigi Bermasalah'
         })} img={require('../../assets/m2.png')} judul="Tanda Gigi Bermasalah" />
 
@@ -201,11 +201,11 @@ export default function Home({ navigation }) {
         justifyContent: 'space-around'
       }}>
         <MyMenu onPress={() => navigation.navigate('SHasil', {
-          pdf: 'bundle-assets://pdf/3.pdf',
+          img: require('../../assets/mm3.png'),
           judul: 'Jenis Penyakit Gigi'
         })} img={require('../../assets/m3.png')} judul="Jenis Penyakit Gigi" />
         <MyMenu onPress={() => navigation.navigate('SHasil', {
-          pdf: 'bundle-assets://pdf/4.pdf',
+          img: require('../../assets/mm4.png'),
           judul: 'Tips Merawat Gigi'
         })} img={require('../../assets/m4.png')} judul="Tips Merawat Gigi" />
 
@@ -219,7 +219,7 @@ export default function Home({ navigation }) {
         justifyContent: 'space-around'
       }}>
         <MyMenu onPress={() => navigation.navigate('SHasil', {
-          pdf: 'bundle-assets://pdf/5.pdf',
+          img: require('../../assets/mm5.png'),
           judul: 'Berita Terbaru Gigi'
         })} img={require('../../assets/m5.png')} judul="Berita Terbaru Gigi" />
         <MyMenu onPress={() => navigation.navigate('STentang')} img={require('../../assets/m6.png')} judul="Konsultasi dan Pendaftaran Gigi Online" />

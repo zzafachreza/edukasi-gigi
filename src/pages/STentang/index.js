@@ -25,7 +25,7 @@ export default function STentang() {
                 fontFamily: fonts.secondary[600],
                 fontSize: windowWidth / 10,
                 textAlign: 'center'
-            }}>0821-1315-6698
+            }}>0812-8897-0209
             </Text>
             <View style={{
                 flexDirection: 'row',
@@ -36,14 +36,9 @@ export default function STentang() {
                     flex: 1,
                     paddingRight: 10,
                 }}>
-                    <MyButton onPress={() => Linking.openURL(`https://wa.me/6282113156698`)} Icons="logo-whatsapp" warna={colors.success} title="Whatsapp" />
+                    <MyButton onPress={() => Linking.openURL(`https://wa.me/6281288970209`)} Icons="logo-whatsapp" warna={colors.success} title="Whatsapp" />
                 </View>
-                <View style={{
-                    flex: 1,
-                    paddingLeft: 10,
-                }}>
-                    <MyButton onPress={() => Linking.openURL(`tel:082113156698`)} Icons="call-outline" warna={colors.primary} title="Telepon" />
-                </View>
+
 
             </View>
 

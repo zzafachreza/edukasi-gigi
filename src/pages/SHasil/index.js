@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { StyleSheet, Dimensions, View, TouchableOpacity, Text } from 'react-native';
-import { colors, fonts } from '../../utils';
+import { StyleSheet, Dimensions, View, TouchableOpacity, Text, Image } from 'react-native';
+import { colors, fonts, windowHeight, windowWidth } from '../../utils';
 import Pdf from 'react-native-pdf';
 
 
 
 export default function SHasil({ navigation, route }) {
-    const source = { uri: route.params.pdf };
+    const source = route.params.img;
 
     // const source = { uri: "bundle-assets://pdf/4.pdf" };
 
@@ -14,7 +14,7 @@ export default function SHasil({ navigation, route }) {
 
     return (
         <View style={styles.container}>
-            <View style={{
+            {/* <View style={{
                 height: 80,
                 backgroundColor: colors.primary,
                 justifyContent: 'center',
@@ -27,23 +27,13 @@ export default function SHasil({ navigation, route }) {
                     color: colors.white,
                     fontSize: 20
                 }}>{route.params.judul}</Text>
-            </View>
+            </View> */}
 
-            <Pdf
-                source={source}
-                onLoadComplete={(numberOfPages, filePath) => {
-                    console.log(`Number of pages: ${numberOfPages}`);
-                }}
-                onPageChanged={(page, numberOfPages) => {
-                    console.log(`Current page: ${page}`);
-                }}
-                onError={(error) => {
-                    console.log(error);
-                }}
-                onPressLink={(uri) => {
-                    console.log(`Link pressed: ${uri}`);
-                }}
-                style={styles.pdf} />
+            <Image source={source} style={{
+                width: '100%',
+                resizeMode: 'contain',
+                height: '100%'
+            }} />
 
         </View>
     )
@@ -53,7 +43,6 @@ export default function SHasil({ navigation, route }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.white
     },
     pdf: {
         flex: 1,

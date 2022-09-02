@@ -45,7 +45,7 @@ export default function Router() {
         component={Register}
         options={{
           headerShown: true,
-          headerTitle: 'Register',
+          headerTitle: 'Daftar',
           headerStyle: {
             backgroundColor: colors.primary,
           },
@@ -93,7 +93,7 @@ export default function Router() {
         name="STentang"
         component={STentang}
         options={{
-          headerShown: true,
+          headerShown: false,
           headerTitle: 'Tentang',
           headerStyle: {
             backgroundColor: colors.primary,

@@ -218,7 +218,7 @@ export default function Register({ navigation }) {
                         iconColor={colors.primary}
                         colorText={colors.primary}
                         warna={colors.secondary}
-                        title="REGISTER"
+                        title="DAFTAR"
                         Icons="log-in"
                         onPress={simpan}
                     />
