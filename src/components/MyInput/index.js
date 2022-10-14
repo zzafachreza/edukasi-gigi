@@ -36,7 +36,8 @@ export default function MyInput({
             fontFamily: fonts.secondary[600],
             color: colors.white,
             left: 10,
-            fontSize: 14,
+            fontSize: 12,
+            maxWidth: '90%',
             ...styleLabel,
           }}>
           {label}

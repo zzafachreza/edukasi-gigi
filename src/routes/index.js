@@ -10,6 +10,7 @@ import {
   SPenyakit,
   STentang,
   SHasil,
+  SDaftar,
 } from '../pages';
 import { colors } from '../utils';
 
@@ -46,6 +47,20 @@ export default function Router() {
         options={{
           headerShown: true,
           headerTitle: 'Daftar',
+          headerStyle: {
+            backgroundColor: colors.primary,
+          },
+          headerTintColor: '#fff',
+        }}
+      />
+
+
+      <Stack.Screen
+        name="SDaftar"
+        component={SDaftar}
+        options={{
+          headerShown: true,
+          headerTitle: 'Pendaftaran Gigi Online',
           headerStyle: {
             backgroundColor: colors.primary,
           },

@@ -1,9 +1,34 @@
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Linking } from 'react-native'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { colors, fonts, windowWidth } from '../../utils'
-import { MyButton } from '../../components'
+import { MyButton, MyGap } from '../../components'
 
-export default function STentang() {
+export default function STentang({ navigation }) {
+
+    const [open, setOpen] = useState(false);
+    useEffect(() => {
+        let today = new Date();
+        const hari = today.getDay();
+        const jam = today.getHours();
+
+        if (hari == 1 && jam >= 8 && jam <= 13) {
+            setOpen(true);
+        } else if (hari == 2 && jam >= 8 && jam <= 13) {
+            setOpen(true);
+        } else if (hari == 3 && jam >= 8 && jam <= 13) {
+            setOpen(true);
+        } else if (hari == 4 && jam >= 8 && jam <= 13) {
+            setOpen(true);
+        } else if (hari == 5 && jam >= 8 && jam <= 13) {
+            setOpen(true);
+        } else if (hari == 6 && jam >= 8 && jam < 12) {
+            setOpen(true);
+        } else if (hari == 7 && jam >= 8 && jam < 12) {
+            setOpen(true);
+        }
+
+    }, [])
+
     return (
         <View style={{
             flex: 1,
@@ -18,7 +43,7 @@ export default function STentang() {
                 fontSize: windowWidth / 25,
                 textAlign: 'center'
             }}>
-                Untuk konsultasi gigi dan pendaftaran perawatan gigi online di Puskesmas Binong silahkan klik dibawah ini:
+                Untuk konsultasi gigi dan perawatan gigi online di Puskesmas Binong silahkan klik dibawah ini:
             </Text>
             <Text style={{
                 marginVertical: 20,
@@ -27,22 +52,12 @@ export default function STentang() {
                 textAlign: 'center'
             }}>0812-8897-0209
             </Text>
-            <View style={{
-                flexDirection: 'row',
 
-            }}>
+            <MyButton onPress={() => Linking.openURL(`https://wa.me/6281288970209`)} Icons="logo-whatsapp" warna={colors.success} title="Whatsapp" />
 
-                <View style={{
-                    flex: 1,
-                    paddingRight: 10,
-                }}>
-                    <MyButton onPress={() => Linking.openURL(`https://wa.me/6281288970209`)} Icons="logo-whatsapp" warna={colors.success} title="Whatsapp" />
-                </View>
+            <MyGap jarak={20} />
 
-
-            </View>
-
-
+            <MyButton onPress={() => open ? navigation.navigate('SDaftar') : alert('Maaf jam pengisian formulis belum tersedia')} Icons="create" warna={open ? colors.primary : colors.border} title="Pendaftaran Gigi Online" />
         </View >
     )
 }
